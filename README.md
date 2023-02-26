@@ -34,7 +34,10 @@ In a separate terminal:
 In second separate terminal:  
 ```celery -A tasks.tasks:celery flower --loglevel=INFO```  
 Enter flower:  
-```localhost:5555```   
+```localhost:5555```  
+#### Schefule tasks
+Same as in No schedule tasks +  
+```celery -A tasks.tasks:celery beat -l info```
 
 ### PostgreSQL
 ```sudo docker run  --rm  --name postgres  -p 5432:5432   -e POSTGRES_USER=postgres   -e POSTGRES_PASSWORD=postgres  -e POSTGRES_DB=collection   -d postgres:14.5```  
