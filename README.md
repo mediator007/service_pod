@@ -13,18 +13,19 @@ Documentation page
 ```http://127.0.0.1:8000/api/openapi```  
 
 ### Redis
-download image:
-```docker pull redis```
-run image:
-```docker run --name redis -d redis```
-redis-cli:
-```docker exec -it redis redis-cli ```
-redis-ip to connect from host:
-- docker inspect redis
+download image:  
+```docker pull redis```  
+run image:  
+```docker run --name redis -d redis```  
+redis-cli:  
+```docker exec -it redis redis-cli ```  
+redis-ip to connect from host:  
+- docker inspect redis  
 - "NetworkSettings": {
         "Gateway": "172.17.0.1",
         "IPAddress": "172.17.0.2"
-    }
+    }  
+    
 ### Celery
 #### No schedule tasks
 In a separate terminal:  
