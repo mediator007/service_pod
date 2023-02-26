@@ -28,12 +28,12 @@ redis-ip to connect from host:
 ### Celery
 #### No schedule tasks
 In a separate terminal:
-```poetry shell```
-```celery -A tasks.tasks:celery worker --loglevel=INFO```
-In second separate terminal:
-```celery -A tasks.tasks:celery flower --loglevel=INFO```
-- Enter flower:
-```localhost:5555```
+```poetry shell```  
+```celery -A tasks.tasks:celery worker --loglevel=INFO```  
+In second separate terminal:  
+```celery -A tasks.tasks:celery flower --loglevel=INFO```  
+Enter flower:  
+```localhost:5555```   
 
 ### PostgreSQL
 ```sudo docker run  --rm  --name postgres  -p 5432:5432   -e POSTGRES_USER=postgres   -e POSTGRES_PASSWORD=postgres  -e POSTGRES_DB=collection   -d postgres:14.5```
