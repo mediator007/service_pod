@@ -2,6 +2,7 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.responses import ORJSONResponse
 
+from api.v1 import base
 from core import config
 
 app = FastAPI(
@@ -15,6 +16,8 @@ app = FastAPI(
     # и заменить стандартный JSON-сериализатор на более шуструю версию, написанную на Rust
     default_response_class=ORJSONResponse,
 )
+
+app.include_router(base.router, prefix='/api/v1')
 
 if __name__ == '__main__':
     # Приложение может запускаться командой
