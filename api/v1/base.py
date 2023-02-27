@@ -1,13 +1,7 @@
 from fastapi import APIRouter
 
-from tasks.tasks import my_task
-from loguru import logger
-
+from .users import users_router
 
 # Объект router, в котором регистрируем обработчики
-router = APIRouter()
-
-@router.get('/')
-async def root_handler():
-    my_task.delay()
-    return {'version': 'v1'}
+api_router = APIRouter()
+api_router.include_router(users_router, prefix="/users", tags=["users"]) 

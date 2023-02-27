@@ -44,3 +44,10 @@ Same as in No schedule tasks +
 enter password(localhost):  
 ```sudo -i -u postgres```  
 ```psql -h localhost```  
+
+### Alembic
+Initial command:  
+```alembic init --t async migrations``` 
+Alembic предоставляет возможность создать в автоматическом режиме сгенерированный файл миграции. Для этого необходимо выполнить команду ```alembic revision --autogenerate -m 01_initial-db```. Флаг ```--autogenerate``` указывает на то, что текущая структура таблиц БД будет сравниваться с описанными моделями приложения, а на основании отличий сгенерируется скрипт изменений.   
+(Возможно в первый раз выполнять без ```--autogenerate```)  
+```alembic upgrade head```  
