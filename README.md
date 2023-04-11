@@ -7,7 +7,7 @@
 ```poetry add fastapi[all]```  
 To add interpreter to IDE use command:  
 ``` poetry env info --path```  
-and add path to IDE.  
+and add path to IDE.     
 
 Documentation page   
 ```http://127.0.0.1:8000/api/openapi```  

@@ -9,7 +9,8 @@ class UserBase(BaseModel):
 
 # Properties to receive on User creation
 class UserCreate(UserBase):
-    pass
+    name: str
+    email: str
 
 # Properties to receive on User update
 class UserUpdate(UserBase):
